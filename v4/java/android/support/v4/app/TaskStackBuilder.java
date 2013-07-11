@@ -114,6 +114,17 @@ public class TaskStackBuilder implements Iterable<Intent> {
      * @param context The context that will launch the new task stack or generate a PendingIntent
      * @return A new TaskStackBuilder
      */
+    public static TaskStackBuilder create(Context context) {
+        return new TaskStackBuilder(context);
+    }
+
+    /**
+     * Return a new TaskStackBuilder for launching a fresh task stack consisting
+     * of a series of activities.
+     *
+     * @param context The context that will launch the new task stack or generate a PendingIntent
+     * @return A new TaskStackBuilder
+     */
     public static TaskStackBuilder from(Context context) {
         return new TaskStackBuilder(context);
     }
